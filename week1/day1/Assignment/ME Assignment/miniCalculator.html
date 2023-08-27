@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .input {
+        text-align: center;
+        margin: 50px;
+      }
+      .input input {
+        width: 200px;
+        height: 30px;
+        border: 2px solid gray;
+        border-radius: 5px;
+      }
+      .button {
+        text-align: center;
+      }
+      .button button {
+        width: 150px;
+        height: 40px;
+        border: 2px solid blue;
+        border-radius: 10px;
+        font-size: x-large;
+      }
+      .button button:hover {
+        cursor: pointer;
+        background-color: gray;
+      }
+      .showOutput {
+        text-align: center;
+      }
+      .showOutput h1 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="input">
+      <input id="first" type="number" placeholder="enter 1st Number" />
+      <input id="second" type="number" placeholder="enter 2nd Number" />
+    </div>
+    <div class="button">
+      <button onclick="addition()">Add</button>
+      <button onclick="subtraction()">Subtract</button>
+      <button onclick="multiplication()">Multiply</button>
+      <button onclick="divison()">Divide</button>
+    </div>
+    <div class="showOutput">
+      <h1 id="result">Show result here !</h1>
+    </div>
+  </body>
+</html>
+<script>
+  let addition = () => {
+    let number1 = document.getElementById("first").value;
+    let number2 = document.getElementById("second").value;
+    let sum = +number1 + +number2;
+    let result = document.getElementById("result");
+    result.innerText = `sum of two number is ${sum}`;
+  };
+  let subtraction = () => {
+    let number1 = document.getElementById("first").value;
+    let number2 = document.getElementById("second").value;
+    let subtract = +number1 - +number2;
+    let result = document.getElementById("result");
+    result.innerText = `subtraction of two number is ${subtract}`;
+  };
+  let multiplication = () => {
+    let number1 = document.getElementById("first").value;
+    let number2 = document.getElementById("second").value;
+    let multiply = +number1 * +number2;
+    let result = document.getElementById("result");
+    result.innerText = `multiplication of two number is ${multiply}`;
+  };
+  let divison = () => {
+    let number1 = document.getElementById("first").value;
+    let number2 = document.getElementById("second").value;
+    let divison = +number1 / +number2;
+    let result = document.getElementById("result");
+    result.innerText = `divison of two number is ${divison}`;
+  };
+</script>
