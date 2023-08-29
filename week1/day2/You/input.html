@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="dInput" type="text" />
+    <button onclick="displayInput()">Submit</button>
+    <h1 id="displayInput"></h1>
+    <script>
+      function displayInput() {
+        let input=document.getElementById('dInput').value;
+        document.getElementById('displayInput').innerText=`Entered value: ${input}`
+        alert(input)
+      }
+    </script>
+  </body>
+</html>
