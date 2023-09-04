@@ -24,7 +24,7 @@ array.map(el=>{
     }else if(el.selectPriority=="Low"){
         td2.style.backgroundColor="green"
         task.value=""
-        priority.value=""~
+        priority.value=""
     }
     td1.innerHTML=el.inptask;
     td2.innerHTML=el.selectPriority
