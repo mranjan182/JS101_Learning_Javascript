@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI</title>
+    <style>
+      button {
+        display: block;
+        margin-top: 10px;
+        margin: 10px auto;
+      }
+      .container {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Check Your BMI</h1>
+      <h3>Enter your weight and height below to check your BMI results</h3>
+      <h3>Put your weight in here (KG)</h3>
+      <input id="weight" type="number" placeholder="enter your weight" />
+      <h3>And your height in here (Metre)</h3>
+      <input id="height" type="number" placeholder="enter your height" />
+      <button id="BMI">Calculate BMI</button>
+      <h1 id="display">Plz enter your weight and height in the above field</h1>
+    </div>
+    <script>
+      let button = document
+        .getElementById("BMI")
+        .addEventListener("click", () => {
+          let weight = document.querySelector("#weight").value;
+          let height = document.getElementById("height").value;
+          let display = document.getElementById("display");
+          let BMI = Number(weight) / Number(height ** 2);
+          
+          let calculate=bmiCalculator(BMI)
+          display.innerText=calculate;
+          weight = document.querySelector("#weight").value=""
+          height = document.getElementById("height").value=""
+         })
+         
+         function bmiCalculator(BMI){
+          if (BMI <= 18.4) {
+            return `Your BMI is ${BMI} which means You are UnderWeight`;
+          } 
+          else if (BMI >= 18.5 && BMI <= 24.9) {
+            return `Your BMI is ${BMI} which means You are Normal Weight`;
+          }else if (BMI >= 25 && BMI <= 29.9) {
+            return `Your BMI is ${BMI} which means You are Overweight`;
+          } else if(BMI>=30)
+            return `Your BMI is ${BMI} which means You are obese`;
+          }
+        
+         
+    </script>
+  </body>
+</html>
