@@ -1,0 +1,21 @@
+/* Fill CSS here */
+h1{
+    text-align: center;
+    color: blue;
+}
+div{
+    display: flex;
+}
+form{
+    
+    width: 300px;
+}
+table{
+    
+    width: 1000px;
+}
+th{
+    border: 2px solid blue;
+    color: white;
+    background-color: blue;
+}
